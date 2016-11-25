@@ -16,3 +16,50 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.message{
+	box-sizing: border-box;
+	background-color: #4286f4;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 1.4em 1.4em;
+	height: 140px;
+	font-weight: 300;
+	border-bottom: 3px solid #444444;
+	border-radius: 2px;
+	&:hover{
+		color: #ffffff;
+		transition: 0.5s;
+		background-color: #d36728;
+		text-decoration: none;
+	}
+}
+
+.message-show{
+	box-sizing: border-box;
+	background-color: #668af4;
+	padding: 2.0em 1.5em;
+	border-bottom: 4px solid #d36728;
+}
+
+.message-desc{
+	font-size: 1.1em;
+	line-height: 1.75;
+	margin-bottom: 50px;
+}
+
+.message-posted-by{
+	padding-left: 30px;
+	font-size: 1em;
+	color: #ddd;
+}
+
+.message-respond{
+	margin-top: 50px;
+}
+
+.comment{
+	padding-left: 10px;
+	font-size: 1.2em;
+}

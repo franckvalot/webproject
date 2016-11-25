@@ -1,9 +1,9 @@
-<p><%= comment.content %></p>
-<p>Posté par <%= comment.user.email %> <%= time_ago_in_words(comment.created_at) %></p>
+<p class="comment"><%= comment.content %></p>
+<p class="message-posted-by">Posté par <%= comment.user.email %> <%= time_ago_in_words(comment.created_at) %></p>
 
 <% if user_signed_in? %>
 	<% if comment.user_id == current_user.id %>
-<%= link_to "Modifier", edit_message_comment_path(comment.message, comment) %>
-<%= link_to "Supprimer", message_comment_path(comment.message, comment), method: :delete, data: {confirm: "Êtes vous sûre ?"} %>
+		<%= link_to "Modifier", edit_message_comment_path(comment.message, comment) %>
+		<%= link_to "Supprimer", message_comment_path(comment.message, comment), method: :delete, data: {confirm: "Êtes vous sûre ?"} %>
 	<% end %>
 <% end %>
