@@ -9,30 +9,34 @@
   </head>
 
   <body>
-  	<div class="navbar nav-custom">
-  		<div class="container">
-  			<div class="navbar-header">
-  				<%= link_to "Message Board", root_path, class: "navbar-brand brand" %>
-  			</div>
-  			<ul class="nav navbar-nav">
-  				<% if user_signed_in? %>
-  				<li><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "nav-element" %></li>
-  				<% else %>
-  					<li><%= link_to "S'enregistrer", new_user_registration_path, class: "nav-element" %></li>
-  					<li><%= link_to "Se connecter", new_user_session_path, class: "nav-element" %></li>
-  				<% end %>
-  			</ul>
-  			<% if  user_signed_in? %>
-          <p><%= link_to "Nouveau Message", new_message_path, class: "navbar-right navbar-text  nav-new" %></p>
-  			<% end %>
-  		</div>
-  	</div>
-  	<p class="notice"><%= notice %></p>
-   	<p class="alert"><%= alert %></p>
+    <div class="my-container">
+      <div class="body">
+      <div class="navbar nav-custom">
+        <div class="container">
+          <div class="navbar-header">
+            <%= link_to "Message Board", root_path, class: "navbar-brand brand" %>
+          </div>
+          <ul class="nav navbar-nav">
+            <% if user_signed_in? %>
+            <li><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "nav-element" %></li>
+            <% else %>
+              <li><%= link_to "S'enregistrer", new_user_registration_path, class: "nav-element" %></li>
+              <li><%= link_to "Se connecter", new_user_session_path, class: "nav-element" %></li>
+            <% end %>
+          </ul>
+          <% if  user_signed_in? %>
+            <p><%= link_to "Nouveau Message", new_message_path, class: "navbar-right navbar-text  nav-new" %></p>
+          <% end %>
+        </div>
+      </div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-   	<div class="container">
-   		<%= yield %>
-   	</div>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="footer">Projet réalisé par Franck Valot</div>
+    </div>
   </body>
-  <footer class="my-footer"><div>Projet réalisé par Franck Valot</div></footer>
 </html>
