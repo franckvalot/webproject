@@ -9,21 +9,21 @@
   </head>
 
   <body>
-  	<div class="navbar navbar-default">
+  	<div class="navbar nav-custom">
   		<div class="container">
   			<div class="navbar-header">
-  				<%= link_to "Message Board", root_path, class: "navbar-brand" %>
+  				<%= link_to "Message Board", root_path, class: "navbar-brand brand" %>
   			</div>
   			<ul class="nav navbar-nav">
-  				<li><%= link_to "S'enregistrer", new_user_registration_path %></li>
   				<% if user_signed_in? %>
-  				<li><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete %></li>
+  				<li><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "nav-element" %></li>
   				<% else %>
-  					<li><%= link_to "Se connecter", new_user_session_path %></li>
+  					<li><%= link_to "S'enregistrer", new_user_registration_path, class: "nav-element" %></li>
+  					<li><%= link_to "Se connecter", new_user_session_path, class: "nav-element" %></li>
   				<% end %>
   			</ul>
   			<% if  user_signed_in? %>
-  				<p><%= link_to "Nouveau Message", new_message_path, class: "navbar-right navbar-text navbar-link" %></p>
+          <p><%= link_to "Nouveau Message", new_message_path, class: "navbar-right navbar-text  nav-new" %></p>
   			<% end %>
   		</div>
   	</div>

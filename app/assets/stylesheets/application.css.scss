@@ -19,7 +19,7 @@
 
 .message{
 	box-sizing: border-box;
-	background-color: #4286f4;
+	background-color: #0086c7;
 	margin-bottom: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -38,21 +38,21 @@
 
 .message-show{
 	box-sizing: border-box;
-	background-color: #668af4;
+	color: black;
+	background-color: #ddd;
 	padding: 2.0em 1.5em;
 	border-bottom: 4px solid #d36728;
 }
 
 .message-desc{
-	font-size: 1.1em;
+	font-size: 1.2em;
 	line-height: 1.75;
 	margin-bottom: 50px;
 }
 
 .message-posted-by{
 	padding-left: 30px;
-	font-size: 1em;
-	color: #ddd;
+	color: #222288;
 }
 
 .message-respond{
@@ -62,4 +62,58 @@
 .comment{
 	padding-left: 10px;
 	font-size: 1.2em;
+}
+
+.new-message{
+	margin-left: 15px;
+	background-color: #0086c7;
+	color: white;
+	&:hover{
+		color: white;
+		font-weight: bold;
+		background-color: #d36728;
+	}
+}
+
+.nav-custom{
+	background-color: #0086c7;
+}
+
+.nav-element{
+	color: white;
+	&:hover{
+		font-weight: bold;
+		transition: 0.5s;
+		text-decoration: none;
+		background-color: white;
+	}
+}
+
+.nav-new{
+	box-sizing: border-box;
+	line-height: 20px;
+	color: white;
+	position: relative;
+	display: block;
+	padding: 15px;
+	margin: 0px;
+	&:hover{
+		font-size: 1.0em;
+		font-weight: bold;
+		text-decoration: none;
+		background-color: white;
+		transition: 0.5s;
+	}
+}
+
+.brand{
+	color: white;
+	&:hover{
+		color: white;
+		font-weight: bold;
+	}
+}
+
+.spacer{
+	margin-top: 50px;
 }

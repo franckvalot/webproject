@@ -11,12 +11,12 @@
 			<h3>Répondre au message : </h3>
 			<%= render 'comments/form' %>
 		</div>
-		
-		<%= link_to "Retour",  root_path %>
+		<div class="spacer"></div>
+		<%= link_to "Retour",  root_path, class: "btn btn-default" %>
 		<% if user_signed_in? %>
 			<% if @message.user_id == current_user.id %>
-				<%= link_to "Modifier", edit_message_path(@message) %>
-				<%= link_to "Supprimer", message_path(@message), method: :delete, data: {confirm: "Etes vous sure de supprimer?"} %>
+				<%= link_to "Modifier", edit_message_path(@message), class: "btn btn-default" %>
+				<%= link_to "Supprimer", message_path(@message), method: :delete, data: {confirm: "Etes vous sure de supprimer?"}, class: "btn btn-default" %>
 			<% end %>
 		<% end %>	
 	</div>
